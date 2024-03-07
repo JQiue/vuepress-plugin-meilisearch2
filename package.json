@@ -1,0 +1,53 @@
+{
+  "name": "vuepress-plugin-meilisearch2",
+  "description": "Added the meilisearch search plugin to Vuepress2.x",
+  "version": "0.1.14",
+  "main": "lib/index.cjs",
+  "module": "./lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "npm run bundle && npm run copy",
+    "bundle": "tsup",
+    "copy": "cpx \"src/**/*.{vue,svg}\" lib",
+    "release": "npm publish --access=public"
+  },
+  "author": "JQiue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JQiue/vuepress-plugin-meilisearch2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JQiue/vuepress-plugin-meilisearch2/issues"
+  },
+  "keywords": [
+    "vuepress",
+    "vuepress-plugin",
+    "meilisearch",
+    "vuepress-next"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-rc.8"
+  },
+  "dependencies": {
+    "@vuepress/utils": "^2.0.0-rc.2",
+    "cpx2": "^7.0.1",
+    "keyword-mark": "^1.0.6",
+    "meilisearch": "^0.37.0",
+    "ts-node": "^10.4.0",
+    "tsconfig-vuepress": "^4.5.0",
+    "tsup": "^8.0.0",
+    "typescript": "~5.3.0",
+    "vue": "^3.4.21"
+  }
+}
