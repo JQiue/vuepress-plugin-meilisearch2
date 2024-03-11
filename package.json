@@ -1,7 +1,7 @@
 {
   "name": "vuepress-plugin-meilisearch2",
   "description": "Added the meilisearch search plugin to Vuepress2.x",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "main": "lib/index.cjs",
   "module": "./lib/index.js",
   "exports": {

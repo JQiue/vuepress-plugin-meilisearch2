@@ -1,8 +1,11 @@
 # vuepress-plugin-meilisearch2
 
+![preview](./images/vuepress-plugin-meilisearch.gif)
+
 这是在 [VuePress Theme Hope](https://theme-hope.vuejs.press/) 中使用的例子
 
 ```ts
+import { defineUserConfig } from 'vuepress';
 import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2';
 
 defineUserConfig({
@@ -28,3 +31,5 @@ export default hopeTheme({
   },
 });
 ```
+
+## 选项
