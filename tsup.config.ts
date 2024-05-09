@@ -12,5 +12,5 @@ export default defineConfig({
   format: ["cjs", "esm"],
   outDir: "lib",
   external: [/\.vue$/u, /^@internal/u],
-  target: "node14",
+  target: "node16",
 });

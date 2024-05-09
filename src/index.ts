@@ -4,6 +4,9 @@ interface PluginOptions {
   host: string;
   apiKey: string;
   index: string;
+  limit?: number;
+  offset?: number;
+  filter?: string | (string | string[])[];
 }
 
 const __dirname = getDirname(import.meta.url);
@@ -16,6 +19,9 @@ export const MeiliSearchPlugin = (options: PluginOptions) => {
       HOST: options.host,
       API_KEY: options.apiKey,
       INDEX: options.index,
+      LIMIT: options.limit ?? 20,
+      OFFSET: options.offset ?? 0,
+      FILTER: options.filter ?? "",
     },
   };
 };

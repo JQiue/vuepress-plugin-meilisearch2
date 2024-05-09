@@ -175,7 +175,7 @@ $inner-shadow: inset .2rem .2rem .5rem var(--greyLight-2),
   margin-right: .5rem;
 }
 
-@media screen and (max-width: 719px) {
+@media (max-width: 719px) {
   .modal {
     width: 100vw;
     left: 0;

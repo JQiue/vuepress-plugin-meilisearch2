@@ -7,7 +7,9 @@
     "skipLibCheck": true,
     "target": "ES2022",
     // "types": ["vuepress/client-types"],
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["src/**/*"]
 }
