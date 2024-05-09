@@ -11,13 +11,6 @@ export default hopeTheme({
     url: "https://mister-hope.com",
   },
 
-  navbarLayout: {
-    start: ["Brand"],
-    center: ["Links"],
-    // 插入到 navbar
-    end: ["Repo", "Outlook", "MeiliSearch"],
-  },
-
   iconAssets: "fontawesome-with-brands",
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
