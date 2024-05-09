@@ -7,6 +7,7 @@ interface PluginOptions {
   limit?: number;
   offset?: number;
   filter?: string | (string | string[])[];
+  searchBoxName?: String;
 }
 
 const __dirname = getDirname(import.meta.url);
@@ -22,6 +23,7 @@ export const MeiliSearchPlugin = (options: PluginOptions) => {
       LIMIT: options.limit ?? 20,
       OFFSET: options.offset ?? 0,
       FILTER: options.filter ?? "",
+      __SEARCH_BOX_NAME__: options.searchBoxName ?? "MeiliSearch",
     },
   };
 };

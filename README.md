@@ -30,6 +30,29 @@ export default hopeTheme({
 });
 ```
 
+## 在默认的vuepress2中使用
+
+![default-theme-use](./images/default-theme-search.gif)
+
+配置中添加 `searchBoxName: "SearchBox"` 
+
+```ts
+import { defineUserConfig } from 'vuepress';
+import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2';
+
+defineUserConfig({
+  plugins: [
+    MeiliSearchPlugin({
+      host: "",
+      apiKey: "",
+      index: "",
+      searchBoxName: "SearchBox",
+    })
+  ]
+})
+```
+
+
 ## 选项
 
 + `host` - 主机
