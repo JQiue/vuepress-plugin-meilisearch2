@@ -18,7 +18,7 @@
   "scripts": {
     "build": "npm run bundle && npm run copy",
     "bundle": "tsup",
-    "copy": "cpx \"src/**/*.{vue,svg,js}\" lib",
+    "copy": "cpx \"src/**/*.{vue,svg,js,css}\" lib",
     "release": "npm publish --access=public"
   },
   "author": "JQiue",
@@ -37,16 +37,17 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@vuepress/utils": "^2.0.0-rc.2",
-    "vuepress": "^2.0.0-rc.8",
-    "ts-node": "^10.4.0",
-    "tsup": "^8.0.0",
-    "typescript": "^5.4.0",
-    "tsconfig-vuepress": "^4.5.0",
-    "cpx2": "^7.0.1",
     "keyword-mark": "^1.0.6",
     "meilisearch": "^0.37.0",
-    "meilisearch-docsearch": "^0.6.0",
     "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vuepress/utils": "2.0.0-rc.2",
+    "cpx2": "^7.0.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-vuepress": "^4.5.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3",
+    "vuepress": "2.0.0-rc.9"
   }
 }
