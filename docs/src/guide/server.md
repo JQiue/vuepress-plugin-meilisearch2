@@ -4,7 +4,7 @@ icon: server
 order: 2
 ---
 
-MeiliSearch provides a server program that offers self-deployment options for users with cloud servers. To simplify server-side MeiliSearch usage, Docker can be used for installation and management.
+MeiliSearch provides a server program that provides self-deployment options for users using cloud servers. To simplify the use of MeiliSearch on the server side, you can use Docker for installation and management.
 
 ## Installation
 
@@ -83,34 +83,3 @@ If successful, you'll receive the following:
 ```
 
 This key can be exposed and used anywhere.
-
-## Migrating from Algolia DocSearch
-
-Migrating from an existing Algolia DocSearch to MeiliSearch is also straightforward. Replace the required parameters in the following script and run it in Node.js to easily complete the migration.
-
-```js
-const algoliaSearch = require("algoliasearch");
-const { MeiliSearch } = require("meilisearch");
-
-const BATCH_SIZE = 1000;
-
-(async () => {
-  const algoliaClient = algoliaSearch("APPLICATION_ID", "ADMIN_API_KEY");
-  const algoliaIndex = algoliaClient.initIndex("INDEX_NAME");
-
-  let records = [];
-  await algoliaIndex.browseObjects({
-    batch: (hits) => {
-      records = records.concat(hits);
-    }
-  });
-
-  const meiliClient = new MeiliSearch({
-    host: "MEILI_HOST",
-    apiKey: "MEILI_API_KEY",
-  });
-  const meiliIndex = meiliClient.index("MEILI_INDEX_NAME");
-
-  await meiliIndex.addDocumentsInBatches(records, BATCH_SIZE);
-})();
-```

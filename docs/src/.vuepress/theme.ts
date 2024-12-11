@@ -15,19 +15,9 @@ export default hopeTheme({
   docsDir: "src",
   navbar,
   sidebar,
-  metaLocales: {
-    editLink: "Edit this page on GitHub",
-  },
+  editLink: false,
   breadcrumb: false,
   markdown: {
-    sub: true,
-    sup: true,
-    tabs: true,
-    tasklist: true,
-  },
-  plugins: {
-    components: {
-      components: ["Badge", "VPCard"],
-    },
+    codeTabs: true,
   },
 });
