@@ -11,7 +11,7 @@ defineUserConfig({
     MeiliSearchPlugin({
       host: '',
       apiKey: '',
-      index: '',
+      indexUid: '',
     })
   ]
 })
