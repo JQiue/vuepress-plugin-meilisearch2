@@ -11,7 +11,8 @@
     "docs:update-package": "pnpm dlx vp-update"
   },
   "dependencies": {
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vuepress-plugin-meilisearch2": "link:.."
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.7",

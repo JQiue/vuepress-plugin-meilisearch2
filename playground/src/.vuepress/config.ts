@@ -1,6 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import { MeiliSearchPlugin } from "../../../lib/index.js";
+import { MeiliSearchPlugin } from "vuepress-plugin-meilisearch2";
 
 export default defineUserConfig({
   base: "/",
@@ -15,8 +15,8 @@ export default defineUserConfig({
     MeiliSearchPlugin({
       host: "https://search.jinqiu.wang",
       apiKey:
-        "b172d836e622bd80787992d0ad189cca8bd1735fe9ca767e8c8340b0cdfd6638",
-      index: "jinqiu-wang",
+        "45a491ecc58df092acf6ec7e8321e40cae427a74aabf9cc831da7af275ae9b09",
+      index: "vuepress",
       // limit: 10,
     }),
   ],

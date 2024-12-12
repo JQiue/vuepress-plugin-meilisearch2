@@ -1,4 +1,5 @@
 import { defineConfig } from "tsup";
+import { commonjs } from "@hyrious/esbuild-plugin-commonjs";
 
 export default defineConfig({
   clean: true,
@@ -9,6 +10,7 @@ export default defineConfig({
     "src/client/define.ts",
     "src/client/global.ts",
   ],
+  esbuildPlugins: [commonjs()],
   format: ["cjs", "esm"],
   outDir: "lib",
   external: [/\.vue$/u, /^@internal/u],
