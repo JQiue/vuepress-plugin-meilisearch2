@@ -37,8 +37,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "keyword-mark": "^1.0.6",
-    "meilisearch": "^0.37.0",
+    "meilisearch-docsearch": "^0.7.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
