@@ -6,6 +6,7 @@ export default defineConfig({
   dts: true,
   entryPoints: ["src/index.ts", "src/client/index.ts", "src/client/define.ts"],
   esbuildPlugins: [commonjs()],
+
   format: ["cjs", "esm"],
   outDir: "lib",
   external: [/\.vue$/u, /^@internal/u],

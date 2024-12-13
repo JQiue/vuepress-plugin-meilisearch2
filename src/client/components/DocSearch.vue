@@ -5,9 +5,10 @@
 <script setup>
 import { onMounted } from "vue";
 import { pluginOptions } from "../define";
-import { docsearch } from "meilisearch-docsearch"
-import "meilisearch-docsearch/css"
-onMounted(() => {
+import "../assets/search.css";
+onMounted(async () => {
+  const { __docsearch_meilisearch__ } = await import("../assets/search.js");
+  const { docsearch } = __docsearch_meilisearch__;
   docsearch({
     container: "#docsearch",
     ...pluginOptions
@@ -15,4 +16,4 @@ onMounted(() => {
 })
 </script>
 
-<style scoped></style>../assets/docsearch.js
+<style scoped></style>

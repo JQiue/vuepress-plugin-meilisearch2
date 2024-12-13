@@ -3,7 +3,7 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-cd docs
+cd vuepress-docs
 
 npm run docs:build
 
