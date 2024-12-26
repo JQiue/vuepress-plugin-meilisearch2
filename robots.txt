@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://vuepress-plugin-meilisearch.jinqiu.wang/sitemap.xml
