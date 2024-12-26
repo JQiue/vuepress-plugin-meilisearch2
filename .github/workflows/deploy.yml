@@ -22,6 +22,7 @@ jobs:
           pnpm i
       - name: Build
         run: |
+          cd hope-docs
           pnpm run docs:build
       - name: Push Deploy Branch
         run: |
