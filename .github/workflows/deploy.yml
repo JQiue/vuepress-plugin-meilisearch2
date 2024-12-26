@@ -16,17 +16,16 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v4
       - name: Install dependency
+        working-directory: ./hope-docs
         run: |
           npm i -g pnpm
-          cd hope-docs
           pnpm i
       - name: Build
-        run: |
-          cd hope-docs
-          pnpm run docs:build
+        working-directory: ./hope-docs
+        run: pnpm run docs:build
       - name: Push Deploy Branch
+        working-directory: ./hope-docs/dist
         run: |
-          cd dist
           git init
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
