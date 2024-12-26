@@ -33,13 +33,17 @@ pnpm add -D vuepress-plugin-meilisearch2
 Use it in your Vuepress Config
 
 ```ts
+import { defineUserConfig } from 'vuepress';
 import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2'
 
-export default {
+defineUserConfig({
   plugins: [
     MeiliSearchPlugin({
-     // Configuration options
+      // Configuration options
+      host: '',
+      apiKey: '',
+      indexUid: '',
     })
-  ],
-}
+  ]
+})
 ```

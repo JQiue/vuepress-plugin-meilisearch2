@@ -18,7 +18,7 @@ copyright: false
 footer: MIT Licensed, Copyright © 2024-present JQiue
 ---
 
-In the search button of this website, the data for searching official vuepress documents has been prepared in advance to demonstrate the use of MeiliSearch.  
+In the search button of this website, the data for searching official vuepress documents has been prepared in advance to demonstrate the use of MeiliSearch.
 
 ## Quick Start
 
@@ -41,13 +41,17 @@ pnpm add -D vuepress-plugin-meilisearch2
 Use it in your Vuepress Config
 
 ```ts
+import { defineUserConfig } from 'vuepress';
 import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2'
 
-export default {
+defineUserConfig({
   plugins: [
     MeiliSearchPlugin({
-     // Configuration options
+      // Configuration options
+      host: '',
+      apiKey: '',
+      indexUid: '',
     })
-  ],
-}
+  ]
+})
 ```

@@ -9,15 +9,19 @@ npm i -D vuepress-plugin-meilisearch2
 ```
 
 ```ts
+import { defineUserConfig } from 'vuepress';
 import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2'
 
-export default {
+defineUserConfig({
   plugins: [
     MeiliSearchPlugin({
-     // Configuration options
+      // Configuration options
+      host: '',
+      apiKey: '',
+      indexUid: '',
     })
-  ],
-}
+  ]
+})
 ```
 
 ## Options
