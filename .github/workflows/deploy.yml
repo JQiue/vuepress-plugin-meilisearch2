@@ -21,10 +21,12 @@ jobs:
           cd hope-docs
           pnpm i
       - name: Build
-        run: pnpm run build
+        run: |
+          cd hope-docs
+          pnpm run build
       - name: Push Deploy Branch
         run: |
-          cd ./dist
+          cd hope-docs/dist
           git init
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
