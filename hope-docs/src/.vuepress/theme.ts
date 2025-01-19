@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
+import * as navbar from "./navbar.ts";
+import * as sidebar from "./sidebar.ts";
 
 export default hopeTheme({
   hostname: "https://vuepress-plugin-meilisearch.jinqiu.wang",
@@ -13,8 +13,16 @@ export default hopeTheme({
   logo: "/logo.svg",
   repo: "JQiue/vuepress-plugin-meilisearch2",
   docsDir: "src",
-  navbar,
-  sidebar,
+  locales: {
+    "/": {
+      navbar: navbar.en,
+      sidebar: sidebar.en,
+    },
+    "/zh/": {
+      navbar: navbar.zh,
+      sidebar: sidebar.zh,
+    },
+  },
   editLink: false,
   breadcrumb: false,
   markdown: {

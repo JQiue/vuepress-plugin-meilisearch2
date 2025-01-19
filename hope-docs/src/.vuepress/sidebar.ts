@@ -1,12 +1,11 @@
 import { sidebar } from "vuepress-theme-hope";
 
-export default sidebar({
-  "/": [
-    {
-      text: "Guide",
-      prefix: "guide/",
-      icon: "book",
-      children: "structure",
-    },
-  ],
+const en = sidebar({
+  "/": "structure",
 });
+
+const zh = sidebar({
+  "/zh": "structure",
+});
+
+export { en, zh };

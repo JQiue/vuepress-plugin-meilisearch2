@@ -1,16 +1,16 @@
 ---
 home: true
 icon: home
-title: Home
+title: 首页
 heroImage: /logo.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: vuepress-plugin-meilisearch2
-tagline: Integrate MeiliSearch into VuePress to provide search functionality for your documentation website.
+tagline: 将 MeiliSearch 集成到 VuePress 中，为您的文档网站提供搜索功能。
 actions:
-  - text: How to Use
+  - text: 如何使用
     icon: lightbulb
     link: ./usage
     type: primary
@@ -18,9 +18,9 @@ copyright: false
 footer: MIT Licensed, Copyright © 2024-present JQiue
 ---
 
-In the search button of this website, the data for searching official vuepress documents has been prepared in advance to demonstrate the use of MeiliSearch.
+在本网站的搜索按钮中，提前准备了搜索 VuePress 官方文档的数据，以演示 MeiliSearch 的使用
 
-## Quick Start
+## 快速开始
 
 ::: code-tabs#npm
 
@@ -38,7 +38,7 @@ pnpm add -D vuepress-plugin-meilisearch2
 
 :::
 
-Use it in your Vuepress Config
+在您的 VuePress 配置中使用它
 
 ```ts
 import { defineUserConfig } from 'vuepress';
@@ -47,7 +47,7 @@ import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2'
 defineUserConfig({
   plugins: [
     MeiliSearchPlugin({
-      // Configuration options
+      // 配置选项
       host: '',
       apiKey: '',
       indexUid: '',

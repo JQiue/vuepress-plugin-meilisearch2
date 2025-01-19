@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
+    "strict": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ES2022"
+    "target": "ES2022",
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true
   },
-  "include": [
-    "src/.vuepress/**/*.ts",
-    "src/.vuepress/**/*.vue"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/.vuepress/**/*.ts", "src/.vuepress/**/*.vue"],
+  "exclude": ["node_modules"]
 }

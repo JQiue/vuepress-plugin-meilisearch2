@@ -11,6 +11,16 @@ export default defineUserConfig({
   description:
     "Integrate MeiliSearch into VuePress to provide search functionality for your documentation website.",
   theme,
+  locales: {
+    "/": {
+      lang: "en-US",
+      title: "vuepress-plugin-meilisearch2",
+    },
+    "/zh/": {
+      lang: "zh-CN",
+      title: "vuepress-plugin-meilisearch2",
+    },
+  },
   plugins: [
     MeiliSearchPlugin({
       host: "https://search.jinqiu.wang",
