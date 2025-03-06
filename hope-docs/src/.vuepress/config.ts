@@ -25,7 +25,7 @@ export default defineUserConfig({
     MeiliSearchPlugin({
       host: "https://search.jinqiu.wang",
       apiKey:
-        "45a491ecc58df092acf6ec7e8321e40cae427a74aabf9cc831da7af275ae9b09",
+        "64294e4e662062d21cdd1a3b7464ccdcf1477f5c9f3f0b8e9b521baf5a39a7ff",
       indexUid: "vuepress",
     }),
   ],
