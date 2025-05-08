@@ -1,5 +1,5 @@
 import { defineUserConfig } from "vuepress";
-import { MeiliSearchPlugin } from "vuepress-plugin-meilisearch2";
+import { meilisearchPlugin } from "@vuepress/plugin-meilisearch";
 
 import theme from "./theme.js";
 
@@ -22,13 +22,11 @@ export default defineUserConfig({
     },
   },
   plugins: [
-    MeiliSearchPlugin({
+    meilisearchPlugin({
       host: "https://search.jinqiu.wang",
       apiKey:
-        "64294e4e662062d21cdd1a3b7464ccdcf1477f5c9f3f0b8e9b521baf5a39a7ff",
-      indexUid: "vuepress",
+        "b12ae64a1070b6f5688f4f66469e19a3b67aa05fd921bb55eb6be192e4946b29",
+      indexUid: "vuepress-hope-theme",
     }),
   ],
-  // Enable it with pwa
-  // shouldPrefetch: false,
 });
